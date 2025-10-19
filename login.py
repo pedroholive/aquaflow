@@ -7,8 +7,10 @@ ADMIN_EMAIL = "phdeoliveira14@gmail.com"
 ADMIN_SENHA = "P97hol"
 
 def login():
+    
     while True:
         valida.limpaTerminal()
+        print('\033[1;34m--- Login do usuário ---\033[m')
         email = valida.validaemail()
         senha = valida.validasenha()
 
@@ -19,6 +21,7 @@ def login():
         if email in dados:
             if dados[email]["Senha"] == senha:
                 email_logado = email
+                status_usuario = dados[email]['Status']
                 print("\033[32mLogin realizado com sucesso!\033[m")
                 sleep(1)
 
@@ -27,6 +30,8 @@ def login():
                     print("\033[33mModo Administrador ativado!\033[m")
                     sleep(1)
                     menu.menu_admin(email_logado)  # chama o menu do admin
+                elif status_usuario.capitalize() == 'Entregador':
+                    menu.MenuPrincipalEntregador(email_logado) #menu entregador
                 else:
                     menu.MenuPrincipal(email_logado)  # menu normal para clientes
                 return

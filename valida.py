@@ -54,6 +54,17 @@ def validaemail():
             continue
         return email
     
+def validastatus():
+        status = input('Você é Cliente ou Entregador? ').strip().capitalize()
+        while status not in ['Cliente', 'Entregador']:
+            print("\033[1;31mOpção inválida.\033[m")
+            status = input("Digite apenas [Cliente/Entregador]: ").strip().capitalize()
+        if status == 'Cliente':
+            print('\033[1;36mCadastro concluído como cliente\033[m')
+        else:
+            print('Cadastro concluído como entregador')
+            
+        return status
 def validaproduto():
     while True:
         nome = input('Nome do produto: ').strip()
@@ -69,14 +80,15 @@ def validaproduto():
         
 def validaqtd():
     while True:
-        quantia = int(input('Digite a quantia do produto que será adicionada: ')).strip()
+        quantia = input('Digite a quantia do produto que será adicionada: ').strip()
         if quantia == '':
             print('\033[31;mERRO! Entrada inválida\033[m')
             continue
         if not quantia.isdigit():
             print('Digite apenas números')
             continue
-        if quantia <= 0:
+        
+        if int(quantia) <= 0:
             print('Não pode colocar uma quantia menor ou igual a zero.')
             continue
         else:
@@ -84,18 +96,20 @@ def validaqtd():
 
 def ValidaValor():
     while True:
-        valor = int(input('Digite a valor do produto que será adicionado: R$')).strip()
+        valor = input('Digite a valor do produto que será adicionado: R$').strip()
         if valor == '':
             print('\033[31;mERRO! Entrada inválida\033[m')
             continue
         if not valor.isdigit():
             print('Digite apenas números')
             continue
-        if valor <= 0:
+        
+        valor_prod = float(valor)
+        if valor_prod <= 0:
             print('Não pode colocar uma valor menor ou igual a zero.')
             continue
-        else:
-            return valor
+        
+        return f'R${float(valor):.2f}'
 
 def ValidaData():
     while True:
