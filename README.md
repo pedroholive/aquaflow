@@ -19,7 +19,7 @@ RF006 - Menu Compras
 RF007 - Menu Estoque                                                                                        
 RF008 - Rankings                                                                                                                            
 RF009 - Menu Principal   
-RF010 - MODO ADM
+RF010 - MODO ADM                         
 RF011 - Bonificações 
 
 ###  2ª RELEASE
