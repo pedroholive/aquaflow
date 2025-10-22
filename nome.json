@@ -34,23 +34,6 @@
             }
         ]
     },
-    "paulopedro45@gmail.com": {
-        "Nome": "Paulo Pedro",
-        "Senha": "Ph123",
-        "Status": "Cliente",
-        "compras": [
-            {
-                "Produto": "Prata do Vale",
-                "Quantidade": 2,
-                "Valor Unitário": "R$14.00",
-                "Valor Total": "R$28.00",
-                "Data": "31/10/2025"
-            }
-        ],
-        "Bonificacoes": [
-            "2 Santa Joana - 31/10/2025"
-        ]
-    },
     "rogerioalvesservo@gmail.com": {
         "Nome": "Rogério Alves de Oliveira",
         "Senha": "Ph123",
@@ -61,6 +44,12 @@
                 "Quantidade": 3,
                 "Data": "21/10/2025",
                 "Cliente": "cristianebrito@gmail.com"
+            },
+            {
+                "Produto": "Santa Maria",
+                "Quantidade": 2,
+                "Data": "22/10/2025",
+                "Cliente": "paulopedro45@gmail.com"
             }
         ],
         "Ultimo Mês bonificado": "2025-10",
@@ -81,5 +70,34 @@
                 "Data": "21/10/2025"
             }
         ]
+    },
+    "paulopedro46@gmail.com": {
+        "Nome": "Pedro",
+        "Senha": "Ph234",
+        "Status": "Cliente",
+        "compras": [
+            {
+                "Produto": "Prata do Vale",
+                "Quantidade": 2,
+                "Valor Unitário": "R$14.00",
+                "Valor Total": "R$28.00",
+                "Data": "31/10/2025"
+            }
+        ],
+        "Bonificacoes": [
+            "2 Santa Joana - 31/10/2025"
+        ]
+    },
+    "milena2965@gmail.com": {
+        "Nome": "Milena",
+        "Senha": "Ph123",
+        "Status": "Cliente",
+        "compras": []
+    },
+    "pedirnhu768@gmail.com": {
+        "Nome": "Pedro Oliveira",
+        "Senha": "Ph123",
+        "Status": "Entregador",
+        "Entregas": []
     }
 }

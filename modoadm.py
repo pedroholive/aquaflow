@@ -4,10 +4,13 @@ import valida
 from time import sleep
 import os
 def MostrarDados(email_admin):
-    #Mostra os dados de todos os usuários
-    valida.limpaTerminal()
-    with open('nome.json', 'r', encoding='utf-8') as arq:
-        dados = json.load(arq)
+    try:
+        with open('nome.json', 'r', encoding='utf-8') as arq:
+            dados = json.load(arq)
+    except json.JSONDecodeError:
+        print(f"\n\033[31m⚠️ O arquivo '{'nome.json'}' está inválido (JSON malformado ou vazio).\033[m")
+        sleep(2)
+        return
 
     print("\033[1;34m=== VISUALIZAÇÃO DE DADOS ===\033[m")
     print("1 - Ver clientes")
@@ -100,8 +103,13 @@ def MostrarDados(email_admin):
 def AtualizarDados(admin_email):
     #Função criada para o administrador atualizar o dado de algum usuário
     valida.limpaTerminal()
-    with open('nome.json', 'r', encoding='utf-8') as arq:
-        dados = json.load(arq)
+    try:
+        with open('nome.json', 'r', encoding='utf-8') as arq:
+            dados = json.load(arq)
+    except json.JSONDecodeError:
+        print(f"\n\033[31m⚠️ O arquivo '{'nome.json'}' está inválido (JSON malformado ou vazio).\033[m")
+        sleep(2)
+        return
 
     print("\n\033[1;34m=== Atualizar Usuário ===\033[m")
     print("\033[34mDigite o email do cliente/entregador que deseja atualizar\033[m")
@@ -171,6 +179,14 @@ def AtualizarDados(admin_email):
 def DeletarContaAdmin(email):
     #Deletar conta de algum usuário
     valida.limpaTerminal()
+    try:
+        with open('nome.json', 'r', encoding='utf-8') as arq:
+            dados = json.load(arq)
+    except json.JSONDecodeError:
+        print(f"\n\033[31m⚠️ O arquivo '{'nome.json'}' está inválido (JSON malformado ou vazio).\033[m")
+        sleep(2)
+        return
+    
     print("\033[1;34m=== Deletar Conta (Admin) ===\033[m")
     print("\033[34mDigite o email do cliente/entregador que deseja atualizar\033[m")
     email = valida.validaemail()  # Admin informa qual conta deletar
