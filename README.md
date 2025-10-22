@@ -76,3 +76,11 @@ RF013 - Aviso sobre Baixo Estoque
 - `validaqtd()`: Valida a quantidade que o usuário digitou
 - `validavalor()`: Valida o valor que foi adiicionado para o produto
 - `ValidaData()`: Valida a data de validade do produto
+
+## TECNOLOGIAS UTILIZADAS
+
+| Tecnologias         | Utilidade |
+|---------------------|-----------|
+| Python 3.13.5       | Linguagem principal de desenvolvimento do sistema. |
+| Draw.io             | Design de fluxogramas. |
+| Json                | Armazenamento de dados |
