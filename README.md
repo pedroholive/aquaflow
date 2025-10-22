@@ -81,6 +81,15 @@ RF013 - Aviso sobre Baixo Estoque
 
 | Tecnologias         | Utilidade |
 |---------------------|-----------|
-| Python 3.13.5       | Linguagem principal de desenvolvimento do sistema. |
+| Python 3.13.7       | Linguagem principal de desenvolvimento do sistema. |
 | Draw.io             | Design de fluxogramas. |
 | Json                | Armazenamento de dados |
+
+## BIBLIOTECAS
+
+| Biblioteca | Utilidade |
+|------------|-----------|
+| `datetime` | Manipulação e formatação de datas e horários. |
+| `os`       | Interação com o sistema operacional (pastas, arquivos, terminal). |
+| `time`     | Controle de tempo, delays e marcação temporal. |
+| `sys`      |Interação com o ambiente operacional do Python |
