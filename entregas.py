@@ -20,7 +20,7 @@ def RegistraEntrega(email):
         print(f"{i} - {p}")
         
     while True:
-        escolha = input('Digite o número do produto que você comprou: ').strip()
+        escolha = input('Digite o número do produto que você entregou: ').strip()
         if not escolha.isdigit() or int(escolha) < 1 or int(escolha) > len(produto):
             print('\033[1;31mOpção inválida. Digite um número da lista \033[m')
             continue

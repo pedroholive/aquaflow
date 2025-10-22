@@ -55,10 +55,31 @@
         "Nome": "Rogério Alves de Oliveira",
         "Senha": "Ph123",
         "Status": "Entregador",
-        "Entregas": [],
+        "Entregas": [
+            {
+                "Produto": "Santa Maria",
+                "Quantidade": 3,
+                "Data": "21/10/2025",
+                "Cliente": "cristianebrito@gmail.com"
+            }
+        ],
         "Ultimo Mês bonificado": "2025-10",
         "Bonificacoes": [
             "R$200 - 31/10/2025"
+        ]
+    },
+    "cristianebrito@gmail.com": {
+        "Nome": "Cristina",
+        "Senha": "Eli123",
+        "Status": "Cliente",
+        "compras": [
+            {
+                "Produto": "Santa Maria",
+                "Quantidade": 3,
+                "Valor Unitário": "R$8.00",
+                "Valor Total": "R$24.00",
+                "Data": "21/10/2025"
+            }
         ]
     }
 }

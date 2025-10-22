@@ -34,6 +34,7 @@ def Rankings(email_usuario):
     ranking.sort(key=lambda x: x[2], reverse=True)
 
     print("\n\033[1;34m=== Ranking de Clientes que Mais Compraram no Mês ===\033[m")
+    print(("\n\033[34mNo término do mês o cliente que mais comprou, ganhará 2 Santa Joanas como bonificação\033[m"))
     for posicao, (email, nome, gasto) in enumerate(ranking, start=1):
         print(f"{posicao}º - {nome} | Total gasto: R${gasto:.2f}")
 
@@ -43,9 +44,11 @@ def Rankings(email_usuario):
     ultimo_dia_mes = (datetime(hoje.year, hoje.month, 28) + timedelta(days=4)).replace(day=1) - timedelta(days=1)
     
     if hoje == ultimo_dia_mes.date() and ranking:
-        # Descobre o(s) primeiro(s) colocado(s)
+        vencedores = []
         max_gasto = ranking[0][2]
-        vencedores = [r for r in ranking if r[2] == max_gasto]
+        for r in ranking:
+            if r[2] == max_gasto:
+                vencedores.append(r)
 
         for email_top, nome_top, _ in vencedores:
             if "Bonificacoes" not in dados[email_top]:
@@ -89,8 +92,6 @@ def RankingEntregadores(email):
         if info.get("Status") == "Entregador":
             entregas = info.get("Entregas", [])
             entregas_mes = []
-
-            
             for e in entregas:
                 try:
                     data_entrega = datetime.strptime(e["Data"], "%d/%m/%Y")
@@ -110,19 +111,23 @@ def RankingEntregadores(email):
     entregadores.sort(key=lambda x: x[2], reverse=True)
 
     print("\n\033[1;34m=== Ranking de Entregadores do Mês ===\033[m")
+    print(("\n\033[34mNo término do mês o entregador que mais fez entregas, ganhará R$200 c\033[m"))
     for pos, (email_ent, nome, total) in enumerate(entregadores, start=1):
         print(f"{pos}º - {nome} | Entregas: {total}")
 
     # Bonificação (somente no último dia do mês)
-    ultimo_dia_mes = (datetime.now().replace(day=28) + timedelta(days=4)).replace(day=1) - timedelta(days=1)
     hoje = datetime.now().date()
+    ultimo_dia_mes = (datetime(hoje.year, hoje.month, 28) + timedelta(days=4)).replace(day=1) - timedelta(days=1)
+    
 
     if hoje == ultimo_dia_mes.date() and entregadores:
         # Pega o maior número de entregas
         max_entregas = entregadores[0][2]
 
-        # Pega todos empatados em primeiro lugar
-        vencedores = [e for e in entregadores if e[2] == max_entregas and max_entregas > 0]
+        vencedores = []  
+        for e in entregadores:
+            if e[2] == max_entregas and max_entregas > 0:
+                vencedores.append(e)
 
         for email_top, nome_top, _ in vencedores:
             if dados[email_top]["Ultimo Mês bonificado"] != mes_atual:
