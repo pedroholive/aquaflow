@@ -20,12 +20,13 @@ RF007 - Menu Estoque
 RF008 - Rankings                                                                                                                            
 RF009 - Menu Principal   
 RF010 - MODO ADM
+RF011 - Bonificações 
 
 ###  2ª RELEASE
-RF010 - Interface do Sistema                                                               
-RF011 - Atualização Semanal dos Rankings                                                                                         
-RF012 - Metas Diárias para os Entregadores                                                                            
-RF013 - Aviso sobre Baixo Estoque                                                
+RF012 - Interface do Sistema                                                               
+RF013 - Atualização Semanal dos Rankings                                                                                         
+RF014 - Metas Diárias para os Entregadores                                                                            
+RF015 - Aviso sobre Baixo Estoque                                                
 
 ## PRINCIPAIS FUNÇÕES DO CÓDIGO
 
