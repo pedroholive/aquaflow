@@ -93,4 +93,6 @@ RF015 - Aviso sobre Baixo Estoque
 | `datetime` | Manipulação e formatação de datas e horários. |
 | `os`       | Interação com o sistema operacional (pastas, arquivos, terminal). |
 | `time`     | Controle de tempo, delays e marcação temporal. |
-| `sys`      |Interação com o ambiente operacional do Python |
+| `sys`      | Interação com o ambiente operacional do Python |
+| `smtplib`  | Envio de emails por meio do protocolo SMTP     |
+| `random`   | Geração de números e escolhas aleatórias       |
