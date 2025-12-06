@@ -23,8 +23,8 @@ RF010 - MODO ADM
 RF011 - Bonificações 
 
 ###  2ª RELEASE
-RF012 - Interface do Sistema                                                               
-RF013 - Atualização Semanal dos Rankings                                                                                         
+RF012 - Verificação de pagamento dos clientes                                                             
+RF013 - Verificação de entrega concluída dos entregadores                                                                                        
 RF014 - Metas Diárias para os Entregadores                                                                            
 RF015 - Aviso sobre Baixo Estoque                                                
 
